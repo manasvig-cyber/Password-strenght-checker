@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+  background-color: black;
+  color: #39FF14;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Matrix columns */
+.matrix-column {
+  position: absolute;
+  top: -100%;
+  font-family: monospace;
+  font-size: 16px;
+  color: rgba(57, 255, 20, 0.05);
+  line-height: 1.2;
+  white-space: nowrap;
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fall {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+/* Flicker effect */
+.matrix-column span {
+  animation: flicker 1.5s infinite alternate;
+}
+
+@keyframes flicker {
+  0% { opacity: 0.05; }
+  50% { opacity: 0.2; }
+  100% { opacity: 0.05; }
+}
+
+/* Input and button styling */
+input {
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  outline: none;
+  background-color: black;
+  color: #39FF14;
+  border: none;
+  font-size: 1rem;
+}
+
+button {
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  outline: none;
+  background-color: black;
+  color: #39FF14;
+  cursor: pointer;
+  border: none;
+}
+
+button:hover {
+  background-color: #39FF14;
+  color: black;
+  box-shadow: 0 0 10px #39FF14;
+}
