@@ -18,6 +18,13 @@ Uppercase and lowercase letters
 Numbers and special characters
 Common password patterns
 
+The main logic in page.tsx evaluates the entered password based on:
+
+Length (≥ 8 characters)
+Presence of uppercase, lowercase, digits, and symbols
+Avoidance of common or repetitive sequences
+A score is computed dynamically and reflected visually (e.g., color bars or messages).
+
 🎨 Styled with globals.css for a clean, responsive UI
 
 🗂️ Folder Structure
@@ -34,7 +41,7 @@ password-strength-checker/
 
 🚀 Getting Started
 Clone the Repository
-git clone https://github.com/your-username/password-strength-checker.git
+git clone https://github.com/manasvig-cyber/password-strength-checker.git
 cd password-strength-checker
 
 Install Dependencies
@@ -46,15 +53,6 @@ npm run dev
 
 Then open your browser and visit:
 👉 http://localhost:3000
-
-How It Works
-
-The main logic in page.tsx evaluates the entered password based on:
-
-Length (≥ 8 characters)
-Presence of uppercase, lowercase, digits, and symbols
-Avoidance of common or repetitive sequences
-A score is computed dynamically and reflected visually (e.g., color bars or messages).
 
  Example UI
 [ Enter your password here ] 
